@@ -16,7 +16,7 @@ namespace PierresOrderTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("Weekly Order", "This order will be dilvered once a week", 100, "12/16/22");
+      Order newOrder = new Order("Weekly Order", "This order will be dilvered once a week", "100", "12/16/22");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -31,8 +31,8 @@ namespace PierresOrderTracker.Tests
     [TestMethod]
     public void GetAll_ReturnsOrders_List()
     {
-      Order newOrder1 = new Order("Weekly Order", "This order will be dilvered once a week", 100, "12/16/22");
-      Order newOrder2 = new Order("Monthly Order", "This order will be dilvered once a month", 1000, "12/16/22");
+      Order newOrder1 = new Order("Weekly Order", "This order will be dilvered once a week", "100", "12/16/22");
+      Order newOrder2 = new Order("Monthly Order", "This order will be dilvered once a month", "1000", "12/16/22");
       List<Order> testList = new List<Order> { newOrder1, newOrder2 };
       CollectionAssert.AreEqual(testList, Order.GetAll());
     }
@@ -40,8 +40,8 @@ namespace PierresOrderTracker.Tests
     [TestMethod]
     public void Find_ReturnsOrderCorrespondingToId_Order()
     {
-      Order newOrder1 = new Order("Weekly Order", "This order will be dilvered once a week", 100, "12/16/22");
-      Order newOrder2 = new Order("Monthly Order", "This order will be dilvered once a month", 1000, "12/16/22");
+      Order newOrder1 = new Order("Weekly Order", "This order will be dilvered once a week", "100", "12/16/22");
+      Order newOrder2 = new Order("Monthly Order", "This order will be dilvered once a month", "1000", "12/16/22");
       Assert.AreEqual(newOrder1, Order.Find(1));
     }
   }

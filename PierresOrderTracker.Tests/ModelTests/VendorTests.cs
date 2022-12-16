@@ -31,7 +31,7 @@ namespace PierresOrderTracker.Tests
     [TestMethod]
     public void AddOrder_AssociatesOrderWithVendor_OrderList()
     {
-      Order newOrder = new Order("Weekly Order", "This order will be dilvered once a week", 100, "12/16/22");
+      Order newOrder = new Order("Weekly Order", "This order will be dilvered once a week", "100", "12/16/22");
       List<Order> testList = new List<Order> { newOrder };
       Vendor newVendor = new Vendor("Whole Foods", "Local grocery store.");
       newVendor.AddOrder(newOrder);
