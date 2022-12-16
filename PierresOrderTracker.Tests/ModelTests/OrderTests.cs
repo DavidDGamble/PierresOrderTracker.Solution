@@ -27,5 +27,14 @@ namespace PierresBakery.Tests
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(newOrder, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsOrders_List()
+    {
+      Order newOrder1 = new Order("Weekly Order", "This order will be dilvered once a week", 100, "12/16/22");
+      Order newOrder2 = new Order("Monthly Order", "This order will be dilvered once a month", 1000, "12/16/22");
+      List<Order> testList = new List<Order> { newOrder1, newOrder2 };
+      CollectionAssert.AreEqual(testList, Order.GetAll());
+    }
   }
 }
