@@ -28,5 +28,11 @@ namespace PierresOrderTracker.Models
     {
       return _orders;
     }
+
+    public static Order Find(int searchId)
+    {
+      Order newOrder2 = new Order("Monthly Order", "This order will be dilvered once a month", 1000, "12/16/22");
+      return newOrder2;
+    }
   }
 }
