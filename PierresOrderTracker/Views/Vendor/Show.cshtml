@@ -5,7 +5,7 @@
 @using PierresOrderTracker.Models;
 
 <h1>@Model["vendor"].Name</h1>
-<h2>@Model["vendor"].Description</h2>
+<p>@Model["vendor"].Description<p>
 
 <h1><u>Orders</u></h1>
 
@@ -14,13 +14,11 @@
   <h3>No Orders have been added yet!</h3>
 }
 
-<ul>
   @foreach (Order order in @Model["orders"])
   {
-    <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+    <h3><a id="link" href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></h3>
   }
-</ul>
 
-<h5><a href='/vendors/@Model["vendor"].Id/orders/new'>Add new order</a></h5>
+<h5 id="toplink"><a href='/vendors/@Model["vendor"].Id/orders/new'>Add new order</a></h5>
 <h5><a href='/vendors'>Return to Vendors</a></h5>
 <h5><a href='/'>Return Home</a></h5>

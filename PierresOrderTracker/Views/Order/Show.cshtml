@@ -5,6 +5,8 @@
 @using PierresOrderTracker.Models;
 
 <h1>@Model["vendor"].Name</h1>
+<p>@Model["vendor"].Description<p>
+
 <h1><u>@Model["order"].Title</u></h1>
 
 <ul>
@@ -14,6 +16,6 @@
 </ul>
 
 
-<h5><a href='/vendors/@Model["vendor"].Id'>Return to Orders</a></h5>
+<h5 id="toplink"><a href='/vendors/@Model["vendor"].Id'>Return to Orders</a></h5>
 <h5><a href='/vendors'>Return to Vendors</a></h5>
 <h5><a href='/'>Return Home</a></h5>

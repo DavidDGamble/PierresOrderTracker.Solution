@@ -13,4 +13,14 @@ body{
 
 ul{
   list-style-position: inside;
+  display:inline-block;
+  text-align: left;
+}
+
+#link {
+  color:darkorange;
+}
+
+#toplink {
+  margin-top: 3%;
 }
