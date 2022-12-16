@@ -2,7 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using PierresOrderTracker.Models;
 
-namespace PierresBakery.Tests
+namespace PierresOrderTracker.Tests
 {
   [TestClass]
   public class PastryTests
