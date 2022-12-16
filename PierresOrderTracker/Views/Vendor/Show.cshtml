@@ -1,0 +1,26 @@
+@{
+  Layout = "_Layout";
+}
+
+@using PierresOrderTracker.Models;
+
+<h1>@Model["vendor"].Name</h1>
+<h2>@Model["vendor"].Description</h2>
+
+<h1><u>Orders</u></h1>
+
+@if (@Model["orders"].Count == 0)
+{
+  <h3>No Orders have been added yet!</h3>
+}
+
+<ul>
+  @foreach (Order order in @Model["orders"])
+  {
+    <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+  }
+</ul>
+
+<h5><a href='/vendors/@Model["vendor"].Id/orders/new'>Add new order</a></h5>
+<h5><a href='/vendors'>Return to Vendors</a></h5>
+<h5><a href='/'>Return Home</a></h5>
