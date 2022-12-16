@@ -19,6 +19,11 @@ namespace PierresOrderTracker.Models
       Id = _orders.Count;
     }
 
+    public static void ClearAll()
+    {
+      _orders.Clear();
+    }
+
     public static List<Order> GetAll()
     {
       return _orders;
