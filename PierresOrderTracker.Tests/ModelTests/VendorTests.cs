@@ -37,5 +37,13 @@ namespace PierresOrderTracker.Tests
       newVendor.AddOrder(newOrder);
       CollectionAssert.AreEqual(testList, newVendor.Orders);
     }
+
+    [TestMethod]
+    public void Find_ReturnsVendorCorrespondingToId_Vendor()
+    {
+      Vendor newVendor1 = new Vendor("Whole Foods", "Local grocery store.");
+      Vendor newVendor2 = new Vendor("Stump Town", "Local coffee shop.");
+      Assert.AreEqual(newVendor1, Vendor.Find(1));
+    }
   }
 }

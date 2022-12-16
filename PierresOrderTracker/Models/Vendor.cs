@@ -31,5 +31,11 @@ namespace PierresOrderTracker.Models
     {
       Orders.Add(order);
     }
+
+    public static Vendor Find(int searchId)
+    {
+      Vendor testVendor = new Vendor("test", "test");
+      return testVendor;
+    }
   }
 }
