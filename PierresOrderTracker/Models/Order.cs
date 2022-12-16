@@ -18,5 +18,10 @@ namespace PierresOrderTracker.Models
       _orders.Add(this);
       Id = _orders.Count;
     }
+
+    public static List<Order> GetAll()
+    {
+      return _orders;
+    }
   }
 }
