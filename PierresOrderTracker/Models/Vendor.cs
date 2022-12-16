@@ -6,7 +6,7 @@ namespace PierresOrderTracker.Models
     public string Name { get; set; }
     public string Description {get; set; }
     public int Id { get; set; }
-    public List<Order> Orders {get; set; }
+    public List<Order> Orders { get; set; }
 
     public Vendor(string name, string description)
     {
@@ -25,6 +25,11 @@ namespace PierresOrderTracker.Models
     public static List<Vendor> GetAll()
     {
       return _vendors;
+    }
+
+    public void AddOrder(Order order)
+    {
+
     }
   }
 }
