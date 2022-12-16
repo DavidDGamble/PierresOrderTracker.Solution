@@ -1,19 +1,8 @@
-## Setup for template
-* _change all appropriate names for ProjectName_
-* _ . - all appropriate files_
-* _ . - ProjectName.Tests.csproj_
-* _ . - Program.cs_
-
-* _[$ dotnet watch run] to run project in developement mode_
-* _[$ dotnet watch run --launch-profile "production"] to run project in production mode._
-
-## FOR GH-PAGES
-
-# _{Application Name}_
+# _{Pierre's Order Tracker}_
 
 #### By: _**David Gamble**_
 
-#### _{Brief description of application}_
+#### _This web app allows users to keep track of vendors and their orders for Pierre's Bakery._
 
 ## Technologies Used
 
@@ -24,19 +13,16 @@
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+_This is a web application that allows users to keep track of vendors and their orders for Pierre's Bakery.  The user can add vendors as well as multiple orders for each vendor.  All information is seperated in a easy to navigate platform._
 
 ## Setup/Installation Requirements
 
-* _Clone the repository to your desktop from: {Enter the repository url here}_
-* _Run [$ dotnet run] in the {ProjectName} repository in {ProjectName.Solutions}_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+* _Clone the repository to your desktop from: {https://github.com/DavidDGamble/PierresOrderTracker.Solution.git}_
+* _Run [$ dotnet run] in the {PierresOrderTracker} repository in {PierresOrderTracker.Solutions}_
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _Does not accept bad user inputs._
 
 ## License
 
