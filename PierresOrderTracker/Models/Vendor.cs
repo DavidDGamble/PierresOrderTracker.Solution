@@ -16,5 +16,10 @@ namespace PierresOrderTracker.Models
       _vendors.Add(this);
       Id = _vendors.Count;
     }
+
+    public static List<Vendor> GetAll()
+    {
+      return _vendors;
+    }
   }
 }
