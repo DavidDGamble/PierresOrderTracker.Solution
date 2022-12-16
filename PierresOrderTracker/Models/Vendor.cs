@@ -34,8 +34,7 @@ namespace PierresOrderTracker.Models
 
     public static Vendor Find(int searchId)
     {
-      Vendor testVendor = new Vendor("test", "test");
-      return testVendor;
+      return _vendors[searchId - 1];
     }
   }
 }
