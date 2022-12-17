@@ -50,11 +50,12 @@ namespace PierresOrderTracker.Controllers
       return View("Show", model);
     }
 
-    // [HttpPost("/vendors/{vendorId}/orders/{orderId}")]
-    // public ActionResult Delete(int vendorId, int orderId)
-    // {
-    //   Order.Delete(orderId);
-
-    // }
+    [HttpPost("/vendors/{vendorId}/orders/{orderId}")]
+    public ActionResult Delete(int vendorId, int orderId)
+    {
+      Order.Delete(orderId);
+      Vendor.DeleteOrder(vendorId, orderId);
+      return RedirectToAction("Show", new { id = vendorId });
+    }
   }
 }
