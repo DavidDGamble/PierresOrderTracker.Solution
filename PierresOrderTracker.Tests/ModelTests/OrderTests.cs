@@ -44,5 +44,15 @@ namespace PierresOrderTracker.Tests
       Order newOrder2 = new Order("Monthly Order", "This order will be dilvered once a month", "1000", "12/16/22");
       Assert.AreEqual(newOrder1, Order.Find(1));
     }
+
+    [TestMethod]
+    public void Delete_DeletesOrderCorrespondingToId_List()
+    {
+      Order newOrder1 = new Order("Weekly Order", "This order will be dilvered once a week", "100", "12/16/22");
+      Order newOrder2 = new Order("Monthly Order", "This order will be dilvered once a month", "1000", "12/16/22");
+      List<Order> testList = new List<Order> { newOrder2 };
+      Order.Delete(1);
+      CollectionAssert.AreEqual(testList, Order.GetAll());
+    }
   }
 }

@@ -33,5 +33,10 @@ namespace PierresOrderTracker.Models
     {
       return _orders[searchId - 1];
     }
+
+    public static void Delete(int id)
+    {
+      
+    }
   }
 }
