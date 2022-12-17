@@ -56,5 +56,15 @@ namespace PierresOrderTracker.Tests
       Vendor.DeleteOrder(1, 1);
       CollectionAssert.AreEqual(testList, newVendor.Orders);
     } 
+
+    [TestMethod]
+    public void Delete_DeletesVendorCorrespodingToId_List()
+    {
+      Vendor newVendor1 = new Vendor("Whole Foods", "Local grocery store.");
+      Vendor newVendor2 = new Vendor("Stump Town", "Local coffee shop.");
+      List<Vendor> testList = new List<Vendor> { newVendor2 };
+      Vendor.Delete(1);
+      CollectionAssert.AreEqual(testList, Vendor.GetAll());
+    }
   }
 }

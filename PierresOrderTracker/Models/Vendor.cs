@@ -41,5 +41,10 @@ namespace PierresOrderTracker.Models
     {
       _vendors[vendorId - 1].Orders.RemoveAt(orderId - 1);
     }
+
+    public static void Delete(int id)
+    {
+      
+    }
   }
 }
