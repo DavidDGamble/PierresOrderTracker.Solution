@@ -19,3 +19,7 @@
 <h5 id="toplink"><a href='/vendors/@Model["vendor"].Id'>Return to Orders</a></h5>
 <h5><a href='/vendors'>Return to Vendors</a></h5>
 <h5><a href='/'>Return Home</a></h5>
+
+<form action='/vendors/@Model["vendor"].Id/orders/@Model["order"].Id' method="post">
+  <button type="submit" class="btn btn-danger">Delete this Item!</button>
+</form>

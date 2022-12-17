@@ -49,5 +49,12 @@ namespace PierresOrderTracker.Controllers
       model.Add("orders", vendorOrders);
       return View("Show", model);
     }
+
+    // [HttpPost("/vendors/{vendorId}/orders/{orderId}")]
+    // public ActionResult Delete(int vendorId, int orderId)
+    // {
+    //   Order.Delete(orderId);
+
+    // }
   }
 }

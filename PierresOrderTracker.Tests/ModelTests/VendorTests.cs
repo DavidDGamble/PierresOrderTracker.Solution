@@ -45,5 +45,16 @@ namespace PierresOrderTracker.Tests
       Vendor newVendor2 = new Vendor("Stump Town", "Local coffee shop.");
       Assert.AreEqual(newVendor1, Vendor.Find(1));
     }
+
+    [TestMethod]
+    public void DeleteOrder_DeletesOrderCorrespondingToId_OrderList()
+    {
+      Order newOrder = new Order("Weekly Order", "This order will be dilvered once a week", "100", "12/16/22");
+      List<Order> testList = new List<Order> { };
+      Vendor newVendor = new Vendor("Whole Foods", "Local grocery store.");
+      newVendor.AddOrder(newOrder);
+      Vendor.DeleteOrder(1, 1);
+      CollectionAssert.AreEqual(testList, newVendor.Orders);
+    } 
   }
 }
