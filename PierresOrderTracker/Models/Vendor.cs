@@ -39,7 +39,7 @@ namespace PierresOrderTracker.Models
 
     public static void DeleteOrder(int vendorId, int orderId)
     {
-      
+      _vendors[vendorId - 1].Orders.RemoveAt(orderId - 1);
     }
   }
 }
